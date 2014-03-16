@@ -1,7 +1,7 @@
 x2w.js - xls2web jQuery plug-in
 ===============================
 
-x2w.js is a jQuery plugin that bridges your custom Microsoft Excel spreadsheet saved on Onedrive (former Skydrive) and your website DOM elements. It is aimed at making your Excel mash-up development process  as easy as calling your spreadheet by token and further processing of a JSON response.
+x2w.js is a jQuery plugin that bridges your custom Microsoft Excel spreadsheet saved on Onedrive (former Skydrive) and your website DOM elements. Inspired by www.excelmashup.com this small library is aimed at making your Excel mash-up development process  as easy as calling your spreadheet by token and further processing of a JSON response.
 
 The following four steps make the basic usage scenario:
 
