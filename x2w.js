@@ -148,7 +148,7 @@ function launchQueryBatch(div, ioIn){
 }
 
 function callbackSelect(div, ioIn){
-    console.log(id(div).getAttribute('data-callback'));
+    //console.log(id(div).getAttribute('data-callback'));
     var callback;
 	if(typeof(ioIn.callback) == "undefined")
 		 	 {
@@ -187,7 +187,7 @@ if (typeof(io) == "undefined")
 	
 };
 
-function noCallback(){console.log("no callback")}
+//function noCallback(){console.log("no callback")}
 
 function populateXlsContent(iframe, options){
 	var filetoken = options.filetoken,
@@ -243,12 +243,12 @@ function launchXlsEmbed(div, currAttempt, totalAttempts, interval) {
 		if ((typeof(excel.loadEwaOnPageLoad) == "function")
 			&& (typeof(excel.Ewa) != "undefined"))
 		{
-			console.log(typeof(excel.Ewa));
+			//console.log(typeof(excel.Ewa));
 			excel.loadEwaOnPageLoad();			
 		}
 		else
 		{
-			console.log(Date.now());
+			//console.log(Date.now());
 			setTimeout(function(){launchXlsEmbed(div, currAttempt+1, totalAttempts, interval);},interval);
 		}
 	}		
