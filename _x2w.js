@@ -49,7 +49,7 @@
       {
         var callbackFnText = "parent."+init+"();";
         var initCallback = new Function(callbackFnText);
-        console.log(callbackFnText);
+        //console.log(callbackFnText);
         initCallback();        
       }
       else
@@ -60,7 +60,7 @@
       if ((listener != null) && (listener != ""))
       {
         Ewa.EwaControl.getInstances().getItem(0).getActiveWorkbook().add_sheetDataEntered(sheetDataEnteredHandler);
-        console.log("listener added"); 
+        //console.log("listener added"); 
       }
       
   }
@@ -72,7 +72,7 @@
       {
         var callbackFnText = "parent."+listener+"();";
         var listenerCallback = new Function(callbackFnText);
-        console.log(callbackFnText);
+        //console.log(callbackFnText);
         listenerCallback();        
       }
       else
@@ -115,7 +115,7 @@
       
       if (objEwa.getActiveWorkbook() != "undefined") {
       	   objEwa.getActiveWorkbook().getRangeA1Async(io.writeTo, setCallback, io);
-      	   console.log("Workbook is here "+io.divId);
+      	   //console.log("Workbook is here "+io.divId);
       } 
       else
       {
@@ -127,8 +127,8 @@
   
   function setCallback(asyncResult)
   {
-    console.log('setCallBack called');
-    console.log(asyncResult);
+    //console.log('setCallBack called');
+    //console.log(asyncResult);
 
     var io = asyncResult.getUserContext(); 
 //    alert('setCallBack called ' + io.divId);   
@@ -139,12 +139,12 @@
       	arrValue[0]    = new Array();  
     		arrValue[0][0] = io.writeValue;
     range.setValuesAsync(arrValue,setRangeValues, io);
-    console.log("setCallBack getcode = 0 "+io.divId);
+    //console.log("setCallBack getcode = 0 "+io.divId);
     }
     else
     {
     setRangeValues(asyncResult);
-    console.log("Set skipped "+io.divId);
+    //console.log("Set skipped "+io.divId);
     }
   }
   
@@ -156,7 +156,7 @@
           
 	if (ewa.getActiveWorkbook() != "undefined") {
             workbook.getRangeA1Async(io.readFrom, getCallBack, io);
-            console.log("setRangeValues was called "+io.divId);
+            //console.log("setRangeValues was called "+io.divId);
         } 
         else
         {
@@ -168,7 +168,7 @@
   function getCallBack(asyncResult) {      
     var range = asyncResult.getReturnValue();
     var io = asyncResult.getUserContext();
-    console.log("getCallBack getCode = "+ asyncResult.getCode());
+    //console.log("getCallBack getCode = "+ asyncResult.getCode());
     
     if (asyncResult.getCode() != 0)
     {
@@ -177,7 +177,7 @@
           
     var io = asyncResult.getUserContext();
     range.getValuesAsync(0,getRangeValues,io);
-    console.log("getCallBack was called "+io.divId);
+    //console.log("getCallBack was called "+io.divId);
   } 
   
   function getRangeValues(asyncResult)
