@@ -1,3 +1,6 @@
+/*
+* author - xls2web
+*/
 function id(domId) {
     return document.getElementById(domId);
 }
