@@ -52,7 +52,7 @@ while( div.hasChildNodes() )
    	iframe.setAttribute("height", "100%");
    	iframe.setAttribute("frameborder", "0");
    	iframe.setAttribute("scrolling", "0");
-   	iframe.setAttribute("onload", "fakeCall");
+//   	iframe.setAttribute("onload", "fakeCall");
    	    
 	div.appendChild(iframe);
 
