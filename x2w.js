@@ -47,21 +47,21 @@ while( div.hasChildNodes() )
         
    	   	
    	var iframe = document.createElement("iframe");
-//   	iframe.setAttribute("src", "excel_uploaded.html?filetoken="+encodeURIComponent(fileToken)+"&div="+div.id+"&init="+init+"&listener="+listener);
-   	iframe.setAttribute("width", "100%");
+   	iframe.setAttribute("src","about:blank");   	
+	iframe.setAttribute("width", "100%");
    	iframe.setAttribute("height", "100%");
    	iframe.setAttribute("frameborder", "0");
    	iframe.setAttribute("scrolling", "0");
-//   	iframe.setAttribute("onload", "fakeCall");
+   	iframe.setAttribute('onload', 'populateXlsContent(this, {"filetoken": "'+ fileToken + '", "div": "'+ div.id + '", "init": "' + init + '", "listener": "' + listener +'"});');
    	    
 	div.appendChild(iframe);
 
-   	populateXlsContent(iframe, {
+ /*  	populateXlsContent(iframe, {
    		"filetoken": fileToken,
    		"div": div.id,
    		"init": init,
    		"listener": listener
-   	});
+   	});*/
 
 
 
@@ -202,6 +202,7 @@ function populateXlsContent(iframe, options){
     var html = childDocument.getElementsByTagName("html")[0];
     var head = childDocument.getElementsByTagName("head")[0];
     var body = childDocument.getElementsByTagName("body")[0];
+
     
     //var meta = childDocument.createElement("meta");    
     var scriptMs = childDocument.createElement("script");
@@ -256,5 +257,7 @@ function launchXlsEmbed(div, currAttempt, totalAttempts, interval) {
 		}
 	}		
 }
+
+
 
 
