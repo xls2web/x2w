@@ -51,7 +51,7 @@ while( div.hasChildNodes() )
 	iframe.setAttribute("width", "100%");
    	iframe.setAttribute("height", "100%");
    	iframe.setAttribute("frameborder", "0");
-   	iframe.setAttribute("scrolling", "0");
+   	iframe.setAttribute("scrolling", "no");
    	iframe.setAttribute('onload', 'populateXlsContent(this, {"filetoken": "'+ fileToken + '", "div": "'+ div.id + '", "init": "' + init + '", "listener": "' + listener +'"});');
    	    
 	div.appendChild(iframe);
