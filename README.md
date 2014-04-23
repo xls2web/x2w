@@ -14,5 +14,6 @@ See more details on JSFiddle:
 <br> http://jsfiddle.net/xls2web/ugBe2/ 
 <br> http://jsfiddle.net/xls2web/RVjLD/
 <br> http://jsfiddle.net/xls2web/KMtnc/
+<br> http://x2w.co
 <br> http://www.xls2web.com
 <br> http://www.excelmashup.com
