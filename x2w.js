@@ -219,7 +219,7 @@ function populateXlsContent(iframe, options){
     scriptMs.setAttribute("src", "http://r.office.microsoft.com/r/rlidExcelWLJS?v=1&kip=1");
     scriptMs.setAttribute("id", "scriptMs");
     scriptGt.innerHTML = 'function GET(){ var GET = {"filetoken": "'+filetoken+'", "div": "'+div+'", "init": "'+init+'", "listener": "'+listener+'"}; return GET;}';
-    scriptJq.setAttribute("src", "http://x2w.xls2web.com/_x2w.js");
+    scriptJq.setAttribute("src", "https://cdn.rawgit.com/xls2web/x2w/master/_x2w.js");
     head.appendChild(scriptMs);
     head.appendChild(scriptGt);
     head.appendChild(scriptJq);
